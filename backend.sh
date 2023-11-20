@@ -49,9 +49,9 @@ mysql -h mysql-dev.devopsmins.online -uroot -pExpenseApp@1 < /app/schema/backend
 echo $?
 
 echo -e "${color} starting backend services\e[0m"
-systemctl daemon-reload>>log_file
-systemctl enable backend>>log_file
-systemctl restart backend>>log_file
+systemctl daemon-reload &>>log_file
+systemctl enable backend &>>log_file
+systemctl restart backend &>>log_file
 echo $?
 
 
